@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#0099cc"
+    android:orientation="vertical"
+    android:padding="30dip"
+    tools:context=".FullscreenActivity" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:gravity="center"
+        android:text="@string/tituloAplicacion"
+        android:textColor="#33b5e5"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/Boton01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/vistaWeb" />
+
+    <Button
+        android:id="@+id/Boton02"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/vistaMapas" />
+
+    <Button
+        android:id="@+id/Boton03"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="AcercaDe" />
+
+    <Button
+        android:id="@+id/Boton04"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Salir" />
+
+</LinearLayout>
