@@ -1,5 +1,7 @@
 package ve.gob.cnti.prueba;
 
+import ve.gob.cnti.prueba.mapas.Localizacion;
+import ve.gob.cnti.prueba.mapas.Mapas;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,10 +24,24 @@ public class FullscreenActivity extends Activity {
 				lanzarMapView();
 			}
 		});
+
+		Button gpsView = (Button) findViewById(R.id.Boton01);
+		gpsView.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				lanzarGPS();
+			}
+		});
 	}
 
 	public void lanzarMapView() {
 		Intent i = new Intent(this, Mapas.class);
+		startActivity(i);
+	}
+
+	public void lanzarGPS() {
+		Intent i = new Intent(this, Localizacion.class);
 		startActivity(i);
 	}
 }
