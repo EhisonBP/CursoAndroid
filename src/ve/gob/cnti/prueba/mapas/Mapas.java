@@ -7,6 +7,7 @@ import ve.gob.cnti.prueba.R;
 import android.app.Activity;
 import android.os.Bundle;
 
+
 public class Mapas extends Activity {
 
 	private MapView mapView;

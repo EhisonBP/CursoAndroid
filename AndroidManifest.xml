@@ -12,7 +12,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -34,7 +34,8 @@
             android:name=".mapas.Mapas"
             android:label="Mapas" >
         </activity>
-        <activity android:name=".mapas.Localizacion"></activity>
+        <activity android:name=".mapas.Localizacion" >
+        </activity>
     </application>
 
 </manifest>

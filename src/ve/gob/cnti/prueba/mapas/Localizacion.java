@@ -15,7 +15,7 @@ import android.widget.TextView;
 public class Localizacion extends Activity implements LocationListener {
 
 	private static final String[] A = { "n/d", "preciso", "Impreciso" };
-	private static final String[] B = { "n/d", "bajo", "medio", "alto" };
+	private static final String[] P = { "n/d", "bajo", "medio", "alto" };
 	private static final String[] E = { "Fuera de Servicio",
 			"Tempotalmente no Disponible ", "disponible" };
 
@@ -96,8 +96,20 @@ public class Localizacion extends Activity implements LocationListener {
 	 */
 	private void mostrarProvedor(String proString) {
 		LocationProvider provider = manager.getProvider(proString);
-		log("LocationProvider[ Nombre =" + provider.getName() + "Proveedor Activo = "+manager.isProviderEnabled(proString));
-		
+		log("LocationProvider[ Nombre = " + provider.getName()
+				+ "Proveedor Activo = " + manager.isProviderEnabled(proString)
+				+ "\n" + "Presicion del GPS = "
+				+ A[Math.max(0, provider.getAccuracy())] + "\n"
+				+ "Requisito de Potencia del GPS = "
+				+ P[Math.max(0, provider.getPowerRequirement())] + "\n"
+				+ "Costo Monetario del GPS = " + provider.hasMonetaryCost()
+				+ "\n" + "Celda Requerida = " + provider.requiresCell() + "\n"
+				+ "Red Requerida = " + provider.requiresNetwork() + "\n"
+				+ "Satelite Requerido = " + provider.requiresSatellite() + "\n"
+				+ "Altitud soportada = " + provider.supportsAltitude() + "\n"
+				+ "Rodamiento soportado = " + provider.supportsBearing() + "\n"
+				+ "Velocidad Soportada = " + provider.supportsSpeed() + "\n");
+
 	}
 
 	private void muestraLocalizacion(Location location) {
