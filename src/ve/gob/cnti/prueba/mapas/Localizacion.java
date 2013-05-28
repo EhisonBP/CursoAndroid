@@ -36,6 +36,9 @@ public class Localizacion extends Activity implements LocationListener {
 
 		// Se realiza la ubicacion de los proveedores y se selecciona el mejor
 		Criteria criteria = new Criteria();
+		criteria.setAccuracy(Criteria.ACCURACY_FINE);
+		criteria.setAltitudeRequired(true);
+
 		proveedor = manager.getBestProvider(criteria, true);
 		log("El mejor proveedor es: " + proveedor + "\n\n");
 

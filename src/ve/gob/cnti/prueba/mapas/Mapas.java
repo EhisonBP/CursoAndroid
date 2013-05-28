@@ -28,8 +28,8 @@ public class Mapas extends Activity {
 		mapView.setBuiltInZoomControls(true);
 		mapView.setMultiTouchControls(true);
 
-		mapView.getController().setZoom(10);
-		mapView.getController().setCenter(new GeoPoint(39.461078, 2.856445));
+		mapView.getController().setZoom(4);
+		mapView.getController().setCenter(new GeoPoint(10.461078, -65.856445));
 		setContentView(mapView);
 	}
 
